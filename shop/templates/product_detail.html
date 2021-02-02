@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'product_list' %}">Всі товари</a>
+   <h1>{{ product.title }}</h1>
+<p>{% if product.in_stock %}
+ В наличии
+ {% else %}
+ Нет в наличии
+ {% endif %}</p>
+
+<p></p>
+<p>Опис товару: {{ product.description }}</p>
+<p>Ціна товару :{{ product.price }} {{ product.currency }}</p>
+<p>Країна виробник :{{ product.producer_country }}</p>
+<p>Дата добавлення :{{ product.created }}</p>
+<img src="{{ product.image.url }}"
+
+
+ created
+ {% endblock %}
+
